@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/output.css">
     <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon">
-    <title>Document</title>
+    <title>Florest</title>
 </head>
-<body class="bg-verde-800 font-sans">
-    <header>
+<body class="container bg-verde-800 font-sans">
+    <header class="container space-y-8">
         <div class="inline-flex mt-4 rounded-md text-verde-300 divide-x-2 divide-verde-800 bg-verde-900 *:px-4 *:py-2">
-            <div class="relative capitalize">
+            <div class="relative capitalize !px-6">
                 <span class="absolute left-[-2px] top-[40%] rounded-full size-2 bg-gradient-to-b from-verde-200 to-verde-400"></span>
                 <!-- dia atual da semana, muda com js -->
                 quinta
@@ -24,19 +24,41 @@
                 <span>🌤️</span>
             </figure>
         </div>
-        <h1>Florest</h1>
-        <ul>
-            <li>Acomodações</li>
-            <li>Eventos</li>
-            <li>Experiências</li>
-            <li>Contato</li>
-        </ul>
+
+        <div class="flex justify-between">
+            <a href="#">
+                <img src="src/img/forest.svg" alt="Logo">
+            </a>
+            <button id="menu" class="flex items-center gap-3 px-5 py-2 rounded-full text-verde-900 bg-gradient-to-b from-verde-200 to-verde-400 desktop:hidden">
+                <span>Menu</span>
+                <div class="space-y-[2px] *:h-[2px] *:w-4 *:rounded-md *:bg-black">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </button>
+            <ul id="navbar" class="hidden bg-verde-950/40 fixed inset-0 flex-col justify-center divide-y-2 divide-white/10 px-8 backdrop-blur-md text-white text-2xl desktop:divide-y-0 desktop:bg-transparent desktop:relative desktop:flex desktop:flex-row desktop:gap-5 *:p-4 *:-translate-x-4 *:opacity-0 *:desktop:hover:bg-transparent">
+                <li class="animate-slideIn animate-1 hover:bg-white/10 desktop:hover:underline desktop:hover:underline-offset-8">
+                    <a href="#">Acomodações</a>
+                </li>
+                <li class="animate-slideIn animate-2 hover:bg-white/10 desktop:hover:underline desktop:hover:underline-offset-8">
+                    <a href="#">Eventos</a>
+                </li>
+                <li class="animate-slideIn animate-3 hover:bg-white/10 desktop:hover:underline desktop:hover:underline-offset-8">
+                    <a href="#">Experiências</a>
+                </li>
+                <li class="animate-slideIn animate-4 hover:bg-white/10 desktop:hover:underline desktop:hover:underline-offset-8">
+                    <a href="#">Contato</a>
+                </li>
+            </ul>
+        </div>
     </header>
-    <main>
+    <main class="container">
 
     </main>
-    <footer>
+    <footer class="container">
 
     </footer>
+    <script src="src/javascript/script.js"></script>
 </body>
 </html>
