@@ -12,6 +12,10 @@ module.exports = {
             },
         },
         extend: {
+            fontFamily: {
+                sans: ['DM Sans', 'system-ui', 'sans-serif'],
+                serif: ['DM Serif Text', 'Georgia', 'serif'],
+            },
             colors: {
                 verde: {
                   200: '#ACEF75',
