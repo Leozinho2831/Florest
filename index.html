@@ -30,7 +30,7 @@
             <a href="#">
                 <img src="src/img/forest.svg" alt="Logo">
             </a>
-            <button id="menu" class="flex items-center gap-3 px-5 py-2 rounded-full text-verde-900 bg-gradient-to-b from-verde-200 to-verde-400 desktop:hidden">
+            <button id="menu" class="btn desktop:hidden">
                 <span>Menu</span>
                 <div class="space-y-[2px] *:h-[2px] *:w-4 *:rounded-md *:bg-black">
                     <div></div>
@@ -55,7 +55,32 @@
         </div>
     </header>
     <main class="container mt-6">
-        
+        <section class="relative pt-64 px-8 pb-8 bg-gradient-to-t from-verde-950/80 rounded-2xl overflow-hidden">
+            <!-- muda por js -->
+            <video 
+                class="absolute -z-10 inset-0 size-full object-cover" src="src/img/video_chuva.mp4"
+                width="1280"
+                height="720"
+                playsinline autoplay loop muted >
+            </video>
+            <!-- o playsinline é para no ios não abrir em fullscreen o vídeo -->
+            <div class="bg-verde-950/60 p-4 rounded-lg space-y-2 mb-8 tablet:bg-verde-950 tablet:space-y-0 tablet:rounded-full tablet:py-1 tablet:pr-1 tablet:pl-4 tablet:inline-flex tablet:flex-row tablet:items-center tablet:gap-8">
+                <p>vagas para dezembro abertas</p>
+                <button class="btn capitalize">reserve hoje <img src="src/img/seta.svg" alt="seta"></img></button>
+            </div>
+            <h1 class="max-w-screen-tablet mb-8 font-serif text-balance text-4xl tablet:text-5xl tablet:mb-20">Venha Experimentar a Vida na Floresta</h1>
+            <div class="flex flex-wrap items-end justify-between gap-6">
+                <p>Melhores locais para visitar <a href="#">2049</a></p>
+                <div>
+                    <p class="uppercase mb-2">recomendado por</p>
+                    <figure class="flex items-center gap-3">
+                        <img class="w-28" src="src/img/parceiros/wildbeast.svg" alt="wildbeast">
+                        <span>|</span>
+                        <figcaption>Revista Nacional</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="container">
 
