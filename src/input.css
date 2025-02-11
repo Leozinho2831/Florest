@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .btn{
+        @apply flex items-center gap-3 px-5 py-2 rounded-full text-verde-900 bg-gradient-to-b from-verde-200 to-verde-400
+    }
+}
