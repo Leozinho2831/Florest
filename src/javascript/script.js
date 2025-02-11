@@ -25,6 +25,7 @@ function weather(){
         // temperatura arredondada
         temperature.textContent = `${Math.round(data.main.temp)}º`;
         
+        // icones da temperatura do dia
         const iconCode = data.weather[0].icon;
         const weatherEmojiCode = {
             "01d": "☀️",  // Céu limpo (dia)
