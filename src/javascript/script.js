@@ -2,6 +2,7 @@ function weather(){
     const dayText = document.querySelector('#dayText');
     const temperature = document.querySelector('#temperature');
     const weatherEmogi = document.querySelector('#weather');
+    const humidityText = document.querySelector('#humidity');
 
     // dia da semana
     const toDay = new Date();
@@ -13,13 +14,13 @@ function weather(){
     // temperatura do dia
     async function searchCity(){
         // id de Andradas
-        const cityID = '3472254';
+        const cityName = 'Andradas';
         const key = 'c24e214bda82c9490effeb3ac8626923';
 
         // faz a requisição na api dos dados do tempo
-        const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?id=${cityID}&appid=${key}&lang=pt_br&units=metric`).then( (response) => {
+        const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${key}&lang=pt_br&units=metric`).then( (response) => {
 
-            return response.json();
+            return response.json();            
         });
 
         // temperatura arredondada
@@ -49,6 +50,10 @@ function weather(){
         };
 
         weatherEmogi.textContent = weatherEmojiCode[iconCode] || "❓";
+
+        // adicionando porcentagem de umidade
+        humidityText.textContent = `${data.main.humidity}%`;
+        
     }
 
     searchCity();
