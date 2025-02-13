@@ -6,4 +6,20 @@
     .btn{
         @apply flex items-center gap-3 px-5 py-2 rounded-full text-verde-900 bg-gradient-to-b from-verde-200 to-verde-400
     }
+
+    .neon{
+        --tw-border-opacity: 1;
+        background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+        --tw-gradient-from: #ACEF75 var(--tw-gradient-from-position);
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+        --tw-gradient-to: #17E880 var(--tw-gradient-to-position);
+        box-shadow: rgba(172, 239, 117, 0.25) 0px 1px 4px 1px, rgb(172, 239, 117) 0px -1px 2px inset;
+        border-radius: 9999px;
+        border-width: 1px;
+        border-color: rgb(172 239 117 / var(--tw-border-opacity));
+    }
+
+    .radial-gradient{
+        background-image: radial-gradient(50% 100% at 50% 0%, rgb(46, 72, 44) 0%, rgb(22, 40, 31) 100%)
+    }
 }
