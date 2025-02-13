@@ -41,13 +41,14 @@ module.exports = {
             },
             animation: {
                 slideIn: 'slideIn 0.5s ease-in-out forwards',
+            },
+            screens: {
+                'mobile': '480px',
+                'tablet': '768px',
+                'desktop': '1024px',
             }
         },
-        screens: {
-            'mobile': '480px',
-            'tablet': '768px',
-            'desktop': '1024px',
-        }
+
     },
     plugins: [plugin(({ addUtilities }) => {
         function animationDelay() {
