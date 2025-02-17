@@ -1,3 +1,5 @@
+import data from './index';
+
 function weather(){
     const dayText = document.querySelector('#dayText');
     const temperature = document.querySelector('#temperature');
@@ -11,52 +13,55 @@ function weather(){
     
     dayText.textContent = dayWeekText[dayWeek];
 
+    console.log(data);
+    
+
     // temperatura do dia
-    async function searchCity(){
-        // id de Andradas
-        const cityName = 'Andradas';
-        const key = 'c24e214bda82c9490effeb3ac8626923';
+    // async function searchCity(){
+    //     // id de Andradas
+    //     const cityName = 'Andradas';
+    //     const key = 'c24e214bda82c9490effeb3ac8626923';
 
-        // faz a requisição na api dos dados do tempo
-        const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${key}&lang=pt_br&units=metric`).then( (response) => {
+    //     // faz a requisição na api dos dados do tempo
+    //     const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${key}&lang=pt_br&units=metric`).then( (response) => {
 
-            return response.json();            
-        });
+    //         return response.json();            
+    //     });
 
-        // temperatura arredondada
-        temperature.textContent = `${Math.round(data.main.temp)}º`;
+    //     // temperatura arredondada
+    //     temperature.textContent = `${Math.round(data.main.temp)}º`;
         
-        // icones da temperatura do dia
-        const iconCode = data.weather[0].icon;
-        const weatherEmojiCode = {
-            "01d": "☀️",  // Céu limpo (dia)
-            "01n": "🌙",  // Céu limpo (noite)
-            "02d": "🌤️", // Poucas nuvens (dia)
-            "02n": "🌥️", // Poucas nuvens (noite)
-            "03d": "☁️",  // Nuvens dispersas
-            "03n": "☁️",  
-            "04d": "🌥️", // Nublado
-            "04n": "🌥️", 
-            "09d": "🌧️", // Chuva leve
-            "09n": "🌧️",
-            "10d": "🌦️", // Chuva moderada (dia)
-            "10n": "🌧️", // Chuva moderada (noite)
-            "11d": "⛈️", // Tempestade
-            "11n": "⛈️",
-            "13d": "❄️", // Neve
-            "13n": "❄️",
-            "50d": "🌫️", // Névoa
-            "50n": "🌫️"
-        };
+    //     // icones da temperatura do dia
+    //     const iconCode = data.weather[0].icon;
+    //     const weatherEmojiCode = {
+    //         "01d": "☀️",  // Céu limpo (dia)
+    //         "01n": "🌙",  // Céu limpo (noite)
+    //         "02d": "🌤️", // Poucas nuvens (dia)
+    //         "02n": "🌥️", // Poucas nuvens (noite)
+    //         "03d": "☁️",  // Nuvens dispersas
+    //         "03n": "☁️",  
+    //         "04d": "🌥️", // Nublado
+    //         "04n": "🌥️", 
+    //         "09d": "🌧️", // Chuva leve
+    //         "09n": "🌧️",
+    //         "10d": "🌦️", // Chuva moderada (dia)
+    //         "10n": "🌧️", // Chuva moderada (noite)
+    //         "11d": "⛈️", // Tempestade
+    //         "11n": "⛈️",
+    //         "13d": "❄️", // Neve
+    //         "13n": "❄️",
+    //         "50d": "🌫️", // Névoa
+    //         "50n": "🌫️"
+    //     };
 
-        weatherEmogi.textContent = weatherEmojiCode[iconCode] || "❓";
+    //     weatherEmogi.textContent = weatherEmojiCode[iconCode] || "❓";
 
-        // adicionando porcentagem de umidade
-        humidityText.textContent = `${data.main.humidity}%`;
+    //     // adicionando porcentagem de umidade
+    //     humidityText.textContent = `${data.main.humidity}%`;
         
-    }
+    // }
 
-    searchCity();
+    // searchCity();
 }
 
 weather();
