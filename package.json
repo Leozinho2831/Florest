@@ -1,10 +1,8 @@
 {
-  "type": "module",
   "devDependencies": {
     "tailwindcss": "^3.4.17"
   },
   "scripts": {
-    "tailwind": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
-    "dev": "node --env-file=.env src/javascript/index.js"
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
   }
 }
