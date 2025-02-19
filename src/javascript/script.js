@@ -65,10 +65,8 @@ function header(){
             case "céu limpo":
             case "nuvens dispersas":
             case "poucas nuvens":
+                case "nublado":
                 videoItem.src = 'src/img/videos/video_sol.mp4';
-                break;
-            case "nublado":
-                videoItem.src = 'src/img/videos/video_nublado.mp4';
                 break;
             case "chuva leve": 
             case "chuva moderada":
