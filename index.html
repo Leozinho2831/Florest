@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,10 +82,10 @@
                 </div>
             </div>
         </section>
-        <section class="flex items-end radial-gradient">
+        <section class="grid desktop:grid-cols-[1fr_2fr] items-end gap-8 pt-16 radial-gradient">
             <div class="bg-[url('./img/padrao.svg')] bg-no-repeat bg-contain bg-left-bottom">
                 <h2 class="text-4xl font-serif mb-8 desktop:text-5xl">Refúgio Natural</h2>
-                <ul class="*:flex *:items-center *:gap-4">
+                <ul class="space-y-4 *:flex *:items-center *:gap-4 tablet:text-xl">
                     <li>
                         <span class="h-0.5 w-6 neon inline-block"></span>
                         Experimente a natureza de perto
@@ -108,10 +108,10 @@
                     </li>
                 </ul>
             </div>
-            <div class="grid grid-cols-2 grid-rows-2">
-                <img class="col-span-2 object-cover" src="src/img/casa1.jpg" alt="Casa na lagoa">
-                <img src="src/img/casa2.jpg" alt="Casa por dentro com lareira">
-                <img src="src/img/casa3.jpg" alt=" Entrada de uma cabana">
+            <div class="grid grid-cols-[2fr_1fr] gap-4 tablet:gap-8">
+                <img class="col-span-full h-52 w-full object-cover rounded-xl" src="src/img/casa1.jpg" alt="Casa na lagoa">
+                <img class="size-full object-cover rounded-xl" src="src/img/casa2.jpg" alt="Casa por dentro com lareira">
+                <img class="size-full object-cover rounded-xl" src="src/img/casa3.jpg" alt=" Entrada de uma cabana">
             </div>
         </section>
     </main>
