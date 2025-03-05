@@ -784,6 +784,11 @@ video {
   height: 100%;
 }
 
+.size-10 {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
 .h-0\.5 {
   height: 0.125rem;
 }
@@ -1081,6 +1086,10 @@ video {
   background-color: rgb(3 5 4 / 0.6);
 }
 
+.bg-\[\] {
+  background-color: ;
+}
+
 .bg-\[url\(\'\.\/img\/padrao\.svg\'\)\] {
   background-image: url('./img/padrao.svg');
 }
@@ -1091,6 +1100,18 @@ video {
 
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+
+.bg-\[url\(\)\] {
+  background-image: url();
+}
+
+.bg-\[url\(\'\'\)\] {
+  background-image: url('');
+}
+
+.bg-\[url\(\'\.\/\'\)\] {
+  background-image: url('./');
 }
 
 .from-verde-200 {
@@ -1282,6 +1303,14 @@ video {
   transition-duration: 150ms;
 }
 
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .animate-1 {
   animation-delay: 0.1s;
 }
@@ -1321,6 +1350,10 @@ video {
 
 .\*\:w-4 > * {
   width: 1rem;
+}
+
+.\*\:flex-1 > * {
+  flex: 1 1 0%;
 }
 
 .\*\:-translate-x-4 > * {
@@ -1469,6 +1502,10 @@ video {
     padding: 2rem;
   }
 
+  .tablet\:p-6 {
+    padding: 1.5rem;
+  }
+
   .tablet\:py-1 {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
@@ -1505,6 +1542,11 @@ video {
   .tablet\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .tablet\:hover\:-translate-y-2:hover {
+    --tw-translate-y: -0.5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 }
 

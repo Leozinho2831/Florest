@@ -47,7 +47,7 @@
                     <a href="#">Experiências</a>
                 </li>
                 <li class="animate-slideIn animate-4 hover:bg-white/10 desktop:hover:underline desktop:hover:underline-offset-8">
-                    <a href="#">Contato</a>
+                    <a href="#contato">Contato</a>
                 </li>
             </ul>
         </div>
@@ -65,7 +65,11 @@
             <!-- o playsinline é para no ios não abrir em fullscreen o vídeo -->
             <div class="bg-verde-950/60 p-4 rounded-lg space-y-2 mb-8 tablet:bg-verde-950 tablet:space-y-0 tablet:rounded-full tablet:py-1 tablet:pr-1 tablet:pl-4 tablet:inline-flex tablet:flex-row tablet:items-center tablet:gap-8">
                 <p>vagas para dezembro abertas</p>
-                <button class="btn capitalize">reserve hoje <img src="src/img/seta.svg" alt="seta"></img></button>
+                <button class="btn capitalize">
+                    <a href="#contato" class="flex gap-2">
+                        reserve hoje <img src="src/img/seta.svg" alt="seta"></img>
+                    </a>
+                </button>
             </div>
             <h1 class="max-w-screen-tablet mb-8 font-serif text-balance text-4xl tablet:text-5xl tablet:mb-20">Venha Experimentar a Vida na Floresta</h1>
             <div class="flex flex-wrap items-end justify-between gap-6">
@@ -73,7 +77,7 @@
                     <a href="#" class="hover:border-b-2 hover:border-spacing-y-2">2049</a>
                 </p>
                 <div>
-                    <p class="uppercase mb-2">recomendado por</p>
+                    <p class="uppercase mb-2">Recomendado por</p>
                     <figure class="flex items-center gap-3">
                         <img class="w-28" src="src/img/parceiros/wildbeast.svg" alt="wildbeast">
                         <span>|</span>
@@ -82,7 +86,7 @@
                 </div>
             </div>
         </section>
-        <section class="container grid desktop:grid-cols-[1fr_2fr] items-end gap-8 pt-16 radial-gradient">
+        <section class="container grid desktop:grid-cols-[1fr_2fr] items-end gap-8 pt-16 radial-gradient mb-12 tablet:mb-16">
             <div class="bg-[url('./img/padrao.svg')] bg-no-repeat bg-contain bg-left-bottom">
                 <h2 class="text-4xl font-serif mb-8 desktop:text-5xl">Refúgio Natural</h2>
                 <ul class="space-y-4 *:flex *:items-center *:gap-4 tablet:text-xl">
@@ -135,7 +139,9 @@
                             <p class="text-xl">Março 2049</p>
                         </div>
                         <p class="text-gray-300 text-balance">Melhor período para observação astronômica. O Céu estará claro e as estrelas visíveis.</p>
-                        <button class="btn">Reservar 23/03</button>
+                        <button class="btn">
+                            <a href="#contato">Reservar 23/03</a>
+                        </button>
                     </div>
                     <div class="span-center space-y-4 bg-verde-800 p-6 rounded-xl tablet:p-8">
                         <h3 class="text-verde-300 text-2xl font-serif">Aurora Boreal</h3>
@@ -144,7 +150,9 @@
                             <p class="text-xl">Abril 2049</p>
                         </div>
                         <p class="text-gray-300 text-balance">Melhor período para observação da Aurora Boreal, o céu estará iluminado pelas estrelas.</p>
-                        <button class="btn">Reservar 15/04</button>
+                        <button class="btn">
+                            <a href="#contato">Reservar 15/04</a>
+                        </button>
                     </div>
                     <div class="span-center space-y-4 bg-verde-800 p-6 rounded-xl tablet:p-8">
                         <h3 class="text-verde-300 text-2xl font-serif">Chuva de Meteoros</h3>
@@ -153,12 +161,14 @@
                             <p class="text-xl">Agosto 2049</p>
                         </div>
                         <p class="text-gray-300 text-balance">Melhor período para observação da Chuva de Meteoros, o céu estará iluminado pelas estrelas.</p>
-                        <button class="btn">Reservar 18/08</button>
+                        <button class="btn">
+                            <a href="#contato">Reservar 18/08</a>
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="container grid gap-8 tablet:grid-cols-2">
+        <section class="container grid gap-8 mb-12 tablet:mb-16 tablet:grid-cols-2">
             <div class="bg-verde-900 rounded-xl p-6 tablet:p-8">
                 <p class="mb-4 uppercase tracking-widest text-sm text-verde-200">Experiências Exclusivas</p>
                 <h2 class="mb-8 font-serif text-balance text-white text-3xl tablet:text-4xl desktop:text-5xl capitalize">Escolha sua próxima aventura</h2>
@@ -194,6 +204,36 @@
                         <span class="text-white">Vida Selvagem</span>
                     </div>
                 </figure>
+            </div>
+        </section>
+        <section class="container bg-[url('./img/padrao.svg')] bg-no-repeat bg-contain">
+            <p class="mb-4 uppercase tracking-widest text-sm text-verde-200 text-center">Ciclo natural</p>
+            <h2 class="mb-8 font-serif text-balance text-white text-4xl tablet:text-6xl text-center">Ritmo da Floresta</h2>
+            <div class="flex flex-col gap-4 *:flex-1 tablet:gap-8 tablet:flex-row">
+                <div class="bg-verde-900 space-y-4 p-6 rounded-xl transition-transform tablet:hover:-translate-y-2 tablet:p-6">
+                    <figure class="neon size-10 flex items-center justify-center">
+                        <img src="src/img/manha.svg" alt="Amanhecer">
+                    </figure>
+                    <h3 class="font-serif text-2xl text-white">Amanhecer</h3>
+                    <p class="text-gray-400">Desperte com o canto dos pássaros e participe das nossas caminhadas ao ar livre.</p>
+                    <p class="text-verde-200">05:40 - 07:00</p>
+                </div>
+                <div class="bg-verde-900 space-y-4 p-6 rounded-xl transition-transform tablet:hover:-translate-y-2 tablet:p-6">
+                    <figure class="neon size-10 flex items-center justify-center">
+                        <img src="src/img/dia.svg" alt="Meio-dia">
+                    </figure>
+                    <h3 class="font-serif text-2xl text-white">Meio-dia</h3>
+                    <p class="text-gray-400">Explore nossas trilhas sombreadas e desfrute de um piquenique gourmet na natureza.</p>
+                    <p class="text-verde-200">12:00 - 14:00</p>
+                </div>
+                <div class="bg-verde-900 space-y-4 p-6 rounded-xl transition-transform tablet:hover:-translate-y-2 tablet:p-6">
+                    <figure class="neon size-10 flex items-center justify-center">
+                        <img src="src/img/noite.svg" alt="Anoitecer">
+                    </figure>
+                    <h3 class="font-serif text-2xl text-white">Anoitecer</h3>
+                    <p class="text-gray-400">Termine seu dia com nossa sessão de observação de estrelas.</p>
+                    <p class="text-verde-200">19:00 - 21:00</p>
+                </div>
             </div>
         </section>
     </main>
