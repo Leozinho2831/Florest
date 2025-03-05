@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="src/output.css">
     <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text&display=swap" rel="stylesheet"/>
-    <title>Florest</title>
+    <title>Florest cópia</title>
 </head>
 <body class="bg-verde-800 font-sans text-white">
     <header class="container space-y-8">
@@ -52,8 +52,8 @@
             </ul>
         </div>
     </header>
-    <main class="container mt-6">
-        <section class="relative pt-64 px-8 pb-8 bg-gradient-to-t from-verde-950/80 rounded-2xl overflow-hidden">
+    <main class="mt-6">
+        <section class="container relative pt-64 px-8 pb-8 bg-gradient-to-t from-verde-950/80 rounded-2xl overflow-hidden">
             <!-- muda por js -->
             <video
                 id="video"
@@ -82,7 +82,7 @@
                 </div>
             </div>
         </section>
-        <section class="grid desktop:grid-cols-[1fr_2fr] items-end gap-8 pt-16 radial-gradient">
+        <section class="container grid desktop:grid-cols-[1fr_2fr] items-end gap-8 pt-16 radial-gradient">
             <div class="bg-[url('./img/padrao.svg')] bg-no-repeat bg-contain bg-left-bottom">
                 <h2 class="text-4xl font-serif mb-8 desktop:text-5xl">Refúgio Natural</h2>
                 <ul class="space-y-4 *:flex *:items-center *:gap-4 tablet:text-xl">
@@ -123,10 +123,83 @@
                 </figure>
             </div>
         </section>
+        <section class="bg-verde-900 mb-12 py-12 tablet:mb-16 tablet:py-16">
+            <div class="container">
+                <p class="uppercase tracking-widest text-sm text-verde-200 text-center mb-4">Conecte-se com a natureza</p>
+                <h2 class="font-serif text-balance text-4xl tablet:text-6xl text-white text-center mb-8">Cada Som, Cada Momento, Uma Nova Descoberta</h2>
+                <div class="overflow-x-auto snap-x snap-mandatory pb-4 grid rid grid-cols-[repeat(3,minmax(300px,1fr))] gap-4 tablet:gap-8">
+                    <div class="span-center space-y-4 bg-verde-800 p-6 rounded-xl tablet:p-8">
+                        <h3 class="text-verde-300 text-2xl font-serif">Lua Nova</h3>
+                        <div>
+                            <p class="font-serif text-5xl">23</p>
+                            <p class="text-xl">Março 2049</p>
+                        </div>
+                        <p class="text-gray-300 text-balance">Melhor período para observação astronômica. O Céu estará claro e as estrelas visíveis.</p>
+                        <button class="btn">Reservar 23/03</button>
+                    </div>
+                    <div class="span-center space-y-4 bg-verde-800 p-6 rounded-xl tablet:p-8">
+                        <h3 class="text-verde-300 text-2xl font-serif">Aurora Boreal</h3>
+                        <div>
+                            <p class="font-serif text-5xl">15</p>
+                            <p class="text-xl">Abril 2049</p>
+                        </div>
+                        <p class="text-gray-300 text-balance">Melhor período para observação da Aurora Boreal, o céu estará iluminado pelas estrelas.</p>
+                        <button class="btn">Reservar 15/04</button>
+                    </div>
+                    <div class="span-center space-y-4 bg-verde-800 p-6 rounded-xl tablet:p-8">
+                        <h3 class="text-verde-300 text-2xl font-serif">Chuva de Meteoros</h3>
+                        <div>
+                            <p class="font-serif text-5xl">18</p>
+                            <p class="text-xl">Agosto 2049</p>
+                        </div>
+                        <p class="text-gray-300 text-balance">Melhor período para observação da Chuva de Meteoros, o céu estará iluminado pelas estrelas.</p>
+                        <button class="btn">Reservar 18/08</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container grid gap-8 tablet:grid-cols-2">
+            <div class="bg-verde-900 rounded-xl p-6 tablet:p-8">
+                <p class="mb-4 uppercase tracking-widest text-sm text-verde-200">Experiências Exclusivas</p>
+                <h2 class="mb-8 font-serif text-balance text-white text-3xl tablet:text-4xl desktop:text-5xl capitalize">Escolha sua próxima aventura</h2>
+                <div class="flex">
+                    <h3 class="text-white text-xl flex items-center gap-4 before:neon before:h-0.5 before:w-6 before:transition-[width] before:hover:w-10">Observação Noturna</h3>
+                </div>
+                <p class="ml-10 mb-8 text-gray-400 text-balance">Explore a vida selvagem em seu habitat natural sob as estrelas.</p>
+                <div>
+                    <h3 class="text-white text-xl flex items-center gap-4 before:neon before:h-0.5 before:w-6 before:transition-[width] before:hover:w-10">Vida Selvagem</h3>
+                </div>
+                <p class="ml-10 mb-8 text-gray-400 text-balance">Observe a vida selvagem em seu habitat natural.</p>
+                <div>
+                    <h3 class="text-white text-xl flex items-center gap-4 before:neon before:h-0.5 before:w-6 before:transition-[width] before:hover:w-10">Canoagem</h3>
+                </div>
+                <p class="ml-10 mb-8 text-gray-400 text-balance">Conquiste novos horizontes com nossa equipe especializada.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <figure class="group relative cursor-pointer overflow-hidden rounded-xl">
+                    <img class="size-full object-cover transition-transform group-hover:scale-110" src="src/img/canoagem.jpg" alt="Canoagem">
+                    <div class="absolute inset-0 z-10 p-4 flex items-end bg-gradient-to-t from-verde-950/80 opacity-0 transition-opacity group-hover:opacity-100">
+                        <span class="text-white">Canoagem</span>
+                    </div>
+                </figure>
+                <figure class="group relative cursor-pointer overflow-hidden rounded-xl row-span-2">
+                    <img class="size-full object-cover transition-transform group-hover:scale-110" src="src/img/observacao-noturna.jpg" alt="Observação Noturna">
+                    <div class="absolute inset-0 z-10 p-4 flex items-end bg-gradient-to-t from-verde-950/80 opacity-0 transition-opacity group-hover:opacity-100">
+                        <span class="text-white">Observação Noturna</span>
+                    </div>
+                </figure>
+                <figure class="group relative cursor-pointer overflow-hidden rounded-xl">
+                    <img class="size-full object-cover transition-transform group-hover:scale-110" src="src/img/vida-selvagem.jpg" alt="Vida Selvagem">
+                    <div class="absolute inset-0 z-10 p-4 flex items-end bg-gradient-to-t from-verde-950/80 opacity-0 transition-opacity group-hover:opacity-100">
+                        <span class="text-white">Vida Selvagem</span>
+                    </div>
+                </figure>
+            </div>
+        </section>
     </main>
     <footer class="container">
 
     </footer>
-    <script src="src/javascript/script.js"></script>
+    <script src="src/script.js"></script>
 </body>
 </html>
