@@ -38,13 +38,13 @@
             </button>
             <ul id="navbar" class="hidden bg-verde-950/40 fixed inset-0 z-10 flex-col justify-center divide-y-2 divide-white/10 px-8 backdrop-blur-md text-2xl desktop:divide-y-0 desktop:bg-transparent desktop:relative desktop:flex desktop:flex-row desktop:gap-5 *:p-4 *:-translate-x-4 *:opacity-0 *:desktop:hover:bg-transparent">
                 <li class="animate-slideIn animate-1 hover:bg-white/10 desktop:hover:underline desktop:hover:underline-offset-8">
-                    <a href="#">Acomodações</a>
+                    <a href="#accommodation">Acomodações</a>
                 </li>
                 <li class="animate-slideIn animate-2 hover:bg-white/10 desktop:hover:underline desktop:hover:underline-offset-8">
-                    <a href="#">Eventos</a>
+                    <a href="#events">Eventos</a>
                 </li>
                 <li class="animate-slideIn animate-3 hover:bg-white/10 desktop:hover:underline desktop:hover:underline-offset-8">
-                    <a href="#">Experiências</a>
+                    <a href="#experience">Experiências</a>
                 </li>
                 <li class="animate-slideIn animate-4 hover:bg-white/10 desktop:hover:underline desktop:hover:underline-offset-8">
                     <a href="#contato">Contato</a>
@@ -86,7 +86,7 @@
                 </div>
             </div>
         </section>
-        <section class="container grid desktop:grid-cols-[1fr_2fr] items-end gap-8 pt-16 radial-gradient mb-12 tablet:mb-16">
+        <section id="accommodation" class="container grid desktop:grid-cols-[1fr_2fr] items-end gap-8 pt-16 radial-gradient mb-12 tablet:mb-16">
             <div class="bg-[url('./img/padrao.svg')] bg-no-repeat bg-contain bg-left-bottom">
                 <h2 class="text-4xl font-serif mb-8 desktop:text-5xl">Refúgio Natural</h2>
                 <ul class="space-y-4 *:flex *:items-center *:gap-4 tablet:text-xl">
@@ -127,7 +127,7 @@
                 </figure>
             </div>
         </section>
-        <section class="bg-verde-900 mb-12 py-12 tablet:mb-16 tablet:py-16">
+        <section id="events" class="bg-verde-900 mb-12 py-12 tablet:mb-16 tablet:py-16">
             <div class="container">
                 <p class="uppercase tracking-widest text-sm text-verde-200 text-center mb-4">Conecte-se com a natureza</p>
                 <h2 class="font-serif text-balance text-4xl tablet:text-6xl text-white text-center mb-8">Cada Som, Cada Momento, Uma Nova Descoberta</h2>
@@ -168,7 +168,7 @@
                 </div>
             </div>
         </section>
-        <section class="container grid gap-8 mb-12 tablet:mb-16 tablet:grid-cols-2">
+        <section id="experience" class="container grid gap-8 mb-12 tablet:mb-16 tablet:grid-cols-2">
             <div class="bg-verde-900 rounded-xl p-6 tablet:p-8">
                 <p class="mb-4 uppercase tracking-widest text-sm text-verde-200">Experiências Exclusivas</p>
                 <h2 class="mb-8 font-serif text-balance text-white text-3xl tablet:text-4xl desktop:text-5xl capitalize">Escolha sua próxima aventura</h2>
@@ -236,7 +236,7 @@
                 </div>
             </div>
         </section>
-        <section class="container grid gap-8 mb-12 tablet:mb-16 tablet:grid-cols-2">
+        <section id="contato" class="container grid gap-8 mb-12 tablet:mb-16 tablet:grid-cols-2">
             <div>
                 <header>
                     <h2 class="capitalize font-serif text-4xl text-verde-300 mb-4">Nossos contatos</h2>
@@ -264,6 +264,7 @@
                     <input 
                         type="text" 
                         name="name"
+                        required
                         class="input"
                     >
                 </div>
@@ -271,6 +272,7 @@
                     <label for="email" class="block mb-1">Email</label>
                     <input 
                         type="email"
+                        required
                         class="input"
                     >
                 </div>
@@ -279,6 +281,8 @@
                     <input 
                         type="tel"
                         class="input"
+                        required
+                        placeholder="(00) 00000-0000"
                     >
                 </div>
                 <div class="mobile:col-span-2">
@@ -286,6 +290,7 @@
                     <textarea 
                         name="message"
                         rows="5"
+                        required
                         class="input resize-none"
                     ></textarea>
                 </div>
