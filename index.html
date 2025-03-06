@@ -258,10 +258,11 @@
                     <p class="text-gray-300">21 99999-9999</p>
                 </div>
             </div>
-            <form action="#" class="grid grid-cols-1 gap-4 rounded-xl p-4 bg-verde-900 shadow-2xl mobile:grid-cols-2 desktop:p-8">
+            <form action="#" novalidate id="form" class="grid grid-cols-1 gap-4 rounded-xl p-4 bg-verde-900 shadow-2xl mobile:grid-cols-2 desktop:p-8">
                 <div class="mobile:col-span-2">
                     <label for="name" class="block mb-1">Nome</label>
                     <input 
+                        id="name"
                         type="text" 
                         name="name"
                         required
@@ -270,7 +271,8 @@
                 </div>
                 <div>
                     <label for="email" class="block mb-1">Email</label>
-                    <input 
+                    <input
+                        id="email"
                         type="email"
                         required
                         class="input"
@@ -278,7 +280,8 @@
                 </div>
                 <div>
                     <label for="phone" class="block mb-1">Telefone</label>
-                    <input 
+                    <input
+                        id="phone"
                         type="tel"
                         class="input"
                         required
@@ -287,14 +290,15 @@
                 </div>
                 <div class="mobile:col-span-2">
                     <label for="message" class="block mb-1">Mensagem</label>
-                    <textarea 
+                    <textarea
+                        id="message"
                         name="message"
                         rows="5"
                         required
                         class="input resize-none"
                     ></textarea>
                 </div>
-                <button class="btn w-fit" type="submit">Enviar Email</button>
+                <button onclick="handleForm()" class="btn w-fit">Enviar Email</button>
             </form>
         </section>
         <aside class="container mb-12 flex flex-col items-center justify-center py-4 divide-y-2 divide-verde-900 *:p-4 tablet:mb-16 tablet:flex-row tablet:gap-8 tablet:divide-y-0 tablet:py-8 tablet:border-t-2 tablet:border-b-2 tablet:border-verde-900">
