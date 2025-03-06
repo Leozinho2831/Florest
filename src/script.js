@@ -117,3 +117,65 @@ function menuMobile(){
 }
 
 menuMobile();
+
+function handleForm(){
+    const name = document.querySelector('#name');
+    const email = document.querySelector('#email');
+    const phone = document.querySelector('#phone');
+    const message = document.querySelector('#message');
+    const form = document.querySelector('#form');
+
+    // Validação para o email
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    // Validação para o telefone
+    const phoneRegex = /^\(\d{2}\)\s?\d{5}-\d{4}$/;
+
+    function verifyInput(){
+
+        if (!emailRegex.test(email.value)){
+            alert('Seu Email está com o formato incorreto! Tente novamente.');
+        } else if (!phoneRegex.test(phone.value)){
+            alert('Seu telefone está com formato incorreto! Tente novamente');
+        } else {
+            name.value = '';
+            email.value = '';
+            phone.value = '';
+            message.value = '';
+
+            alert('Sua mensagem foi enviada com sucesso!');
+        }
+    }
+
+    function completeValueInput() {
+        phone.value = phone.value.replace(/\D/g, '');
+
+        let valueArrayPhone = [];
+
+        // o replace é para não deixar digitar letras
+        valueArrayPhone = phone.value.split('');
+
+        if (valueArrayPhone.length === 11){
+            phone.value = `(${valueArrayPhone.slice(0, 2).join('')}) ${valueArrayPhone.slice(2, 7).join('')}-${valueArrayPhone.slice(7, 11).join('')}`;
+        }
+    }
+
+    phone.addEventListener('input', completeValueInput);
+
+    form.onsubmit = (event) => {
+        event.preventDefault();
+
+        if(name.value === ''){
+            alert('Digite seu nome.')
+        } else if(email.value === ''){
+            alert('Digite seu Email.')
+        } else if(phone.value === ''){
+            alert('Digite seu telefone.')
+        } else if(message.value === ''){
+            alert('Digite o que deseja falar para nós no campo de mensagem.')
+        } else {
+            verifyInput();
+        }
+    }
+}
+
+document.addEventListener("DOMContentLoaded", handleForm);
