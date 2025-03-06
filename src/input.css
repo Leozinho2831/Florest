@@ -22,4 +22,10 @@
     .radial-gradient{
         background-image: radial-gradient(50% 100% at 50% 0%, rgb(46, 72, 44) 0%, rgb(22, 40, 31) 100%)
     }
+
+    .input{
+        @apply w-full bg-verde-800 rounded-md border-2 border-verde-800 p-2 text-white 
+        focus:outline-none focus:ring-2 focus:ring-verde-400 focus:border-verde-900
+        placeholder:text-verde-900
+    }
 }
