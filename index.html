@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="src/output.css">
     <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text&display=swap" rel="stylesheet"/>
-    <title>Florest cópia</title>
+    <title>Florest</title>
 </head>
 <body class="bg-verde-800 font-sans text-white">
     <header class="container space-y-8">
@@ -285,15 +285,72 @@
                     <label for="message" class="block mb-1">Mensagem</label>
                     <textarea 
                         name="message"
-                        class="input resize-none h-36"
+                        rows="5"
+                        class="input resize-none"
                     ></textarea>
                 </div>
                 <button class="btn w-fit" type="submit">Enviar Email</button>
             </form>
         </section>
+        <aside class="container mb-12 flex flex-col items-center justify-center py-4 divide-y-2 divide-verde-900 *:p-4 tablet:mb-16 tablet:flex-row tablet:gap-8 tablet:divide-y-0 tablet:py-8 tablet:border-t-2 tablet:border-b-2 tablet:border-verde-900">
+            <figure>
+                <img src="src/img/parceiros/caravan.svg" alt="Caravan">
+            </figure>
+            <figure>
+                <img src="src/img/parceiros/dogs.svg" alt="dogs">
+            </figure>
+            <figure>
+                <img src="src/img/parceiros/wildbeast.svg" alt="Wildbeast">
+            </figure>
+            <figure>
+                <img src="src/img/parceiros/lescone.svg" alt="LeScone">
+            </figure>
+            <figure>
+                <img src="src/img/parceiros/surfbot.svg" alt="Surfbot">
+            </figure>
+        </aside>
     </main>
-    <footer class="container">
-
+    <footer class="container pb-8">
+        <section class="mb-8 bg-verde-900 grid gap-8 p-6 rounded-2xl tablet:grid-cols-2 tablet:p-12">
+            <div class="flex flex-col gap-4 mobile:flex-row tablet:gap-12">
+                <div>
+                    <h2 class="text-white font-serif text-xl mb-4">Endereço</h2>
+                    <p class="text-gray-400">
+                        Rua da Mata, 123
+                        <br>
+                        Floresta Nacional
+                        <br>
+                        Rio de Janeiro, RJ
+                    </p>
+                </div>
+                <div>
+                    <h2 class="text-white font-serif text-xl mb-4">Contato</h2>
+                    <p class="text-gray-400">
+                        contato@forest.com
+                        <br>
+                        +55 21 9999-9999
+                    </p>
+                </div>
+            </div>
+            <div class="tablet:justify-self-end">
+                <img class="mb-4" src="src/img/forest.svg" alt="Florest">
+                <p class="text-gray-400">Conecte-se com a natureza</p>
+            </div>
+        </section>
+        <div class="flex items-center justify-between gap-8 flex-wrap-reverse text-gray-400">
+            <p>© 2024 Forest. Todos os direitos reservados.</p>
+            <ul class="flex gap-8">
+                <li>
+                    <a class="hover:text-verde-300" href="#">Instagram</a>
+                </li>
+                <li>
+                    <a class="hover:text-verde-300" href="#">LinkedIn</a>
+                </li>
+                <li>
+                    <a class="hover:text-verde-300" href="#">Fecebook</a>
+                </li>
+            </ul>
+        </div>
     </footer>
     <script src="src/script.js"></script>
 </body>
