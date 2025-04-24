@@ -1,20 +1,83 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+    /* Zera todos os breakpoints padrão */
+  --breakpoint-*: initial;
+
+  /* Define as media querry */
+  --breakpoint-mobile : 480px;
+  --breakpoint-sm: 640px;
+  --breakpoint-tablet : 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-xl: 1280px;
+
+    --color-verde-200: #ACEF75;
+    --color-verde-300: #91EE77;
+    --color-verde-400: #17E880;
+    --color-verde-700: #2E482C;
+    --color-verde-800: #16281F;
+    --color-verde-900: #0F1C15;
+    --color-verde-950: #030504;
+    /* precisa ser em rgb para funcionar na função rgba */
+    --color-verde-200-rgb: 172, 239, 117;
+
+    --font-sans: 'DM Sans', 'system-ui', 'sans-serif';
+    --font-serif: 'DM Serif Text', 'Georgia', 'serif';
+
+    --animate-slideIn: slideIn 0.5s ease-in-out forwards;
+
+    @keyframes slideIn {
+        0% {
+            opacity: 0;
+            transform: translate(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+}
+
+@utility container {
+    margin: 0 auto;
+    padding: 0 0.5rem;
+
+    @media (width >= var(--breakpoint-sm)){
+        padding: 0 1rem;
+    }
+}
+
+@utility animate-1 {
+    animation-delay: 0.1s;
+}
+
+@utility animate-2 {
+    animation-delay: 0.2s;
+}
+
+@utility animate-3 {
+    animation-delay: 0.3s;
+}
+
+@utility animate-4 {
+    animation-delay: 0.4s;
+}
 
 @layer components{
     .btn{
-        @apply flex items-center gap-3 px-5 py-2 rounded-full text-verde-900 bg-gradient-to-b from-verde-200 to-verde-400 transition hover:contrast-200;
-        box-shadow: 0 1px 4px 1px theme(colors.verde.200 / 0.25), inset 0 -1px 2px theme(colors.verde.200)
+        @apply flex items-center gap-3 px-5 py-2 rounded-full text-verde-900 bg-linear-to-b from-verde-200 to-verde-400 transition hover:contrast-200;
+        box-shadow: 0 1px 4px 1px rgba(var(--color-verde-200-rgb), 0.25), 
+                    inset 0 -1px 2px rgba(var(--color-verde-200));
     }
 
     .neon{
-        @apply rounded-full border-verde-200 bg-gradient-to-b from-verde-200 to-verde-400 text-verde-900;
-        box-shadow: 0 1px 4px 1px theme(colors.verde.200 / 0.25), inset 0 -1px 2px theme(colors.verde.200);
+        @apply rounded-full border-verde-200 bg-linear-to-b from-verde-200 to-verde-400 text-verde-900;
+        box-shadow: 0 1px 4px 1px rgba(var(--color-verde-200-rgb), 0.25), 
+                    inset 0 -1px 2px var(--color-verde-200);
     }
 
     .radial-gradient{
-        background-image: radial-gradient(50% 100% at 50% 0%, theme(colors.verde.700) 0%, theme(colors.verde.800) 100%);
+        @apply bg-radial-[50%_100%_at_50%_0%] from-verde-700 to-verde-800;
     }
 
     .input{
